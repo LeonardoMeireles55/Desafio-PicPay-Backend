@@ -45,21 +45,21 @@ public class TransactionService {
         walletRepository.save(payeeWallet.creditWallet(transaction.value()));
         walletRepository.save(payerWallet.debitWallet(transaction.value()));
 
-        authorizerService.authorize(transaction);
+        authorizerService.authorize(newTransaction);
         notificationService.notify(newTransaction);
 
         return newTransaction;
     }
 
     private void transactionValidation(Transaction transaction) {
-        if (transaction.payer() == transaction.payee()) {
+        if (transaction.payer() == transaction.payee() || transaction.payee() == null || transaction.payer() == null) {
             throw new GlobalErrorHandling.InvalidTransactionException();
         }
 
         var payerWallet = walletRepository.findById(transaction.payer());
 
         if (payerWallet == null || payerWallet.get().type() == WalletType.LOGISTA.getValue()) {
-            throw new GlobalErrorHandling.UnauthorizedTransactionException();
+            throw new GlobalErrorHandling.InvalidTransactionException();
         }
 
         var payee = walletRepository.findById(transaction.payee());

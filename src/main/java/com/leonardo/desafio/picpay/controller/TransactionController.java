@@ -4,6 +4,8 @@ import com.leonardo.desafio.picpay.dto.TransactionsList;
 import com.leonardo.desafio.picpay.model.Transaction;
 import com.leonardo.desafio.picpay.service.TransactionService;
 
+import jakarta.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +25,7 @@ public class TransactionController {
     }
 
     @PostMapping
-    public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction) {
+    public ResponseEntity<Transaction> createTransaction(@RequestBody @Valid Transaction transaction) {
         var response = transactionService.createTransaction(transaction);
         return ResponseEntity.ok(response);
     }
