@@ -22,7 +22,7 @@ Resolução do desafio do "picpay simplificado"
 **Diagrama ER**
 <br>
 <br>
-![Screenshot from 2024-03-14 22-58-34](https://github.com/LeonardoMeireles55/picpay/assets/123477726/f3e93c79-683e-4b9f-8688-bbe49c0de367)
+![Screenshot from 2024-03-14 22-58-34](https://github-production-user-asset-6210df.s3.amazonaws.com/123477726/313043136-f3e93c79-683e-4b9f-8688-bbe49c0de367.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240315%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240315T150538Z&X-Amz-Expires=300&X-Amz-Signature=465af97225ac80b885e500d29fa66805c1d6989faee43e2b86bcb7de181d775d&X-Amz-SignedHeaders=host&actor_id=123477726&key_id=0&repo_id=772006076)
 
 ### Transações
 **Requisições**
