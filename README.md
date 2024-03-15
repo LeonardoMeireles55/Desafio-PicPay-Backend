@@ -22,9 +22,7 @@ Resolução do desafio do "picpay simplificado"
 **Diagrama ER**
 <br>
 <br>
-<span>
 ![Screenshot from 2024-03-14 22-58-34](https://github.com/LeonardoMeireles55/picpay/assets/123477726/f3e93c79-683e-4b9f-8688-bbe49c0de367)
-</span>
 
 ### Transações
 **Requisições**
